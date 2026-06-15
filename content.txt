@@ -9,3 +9,8 @@
         > debugging
         > easy to colab
 
+5. end to end projec t(chatbook class)
+        > encapsulation
+        > getter and setter
+        > static method
+

@@ -1,9 +1,34 @@
 class chatbook:
+
+    __user_id = 1
+
     def __init__(self):
+        self.id = chatbook.__user_id
+        chatbook.__user_id += 1
+        self.__name = "default user"
         self.username = ""
         self.password = ""
         self.loggedin = False
-        self.menu()
+        # self.menu()
+
+    @staticmethod
+    def get_id():
+        return chatbook.__user_id
+    
+    @staticmethod
+    def set_id(value):
+        chatbook.__user_id = value
+        return chatbook.__user_id
+
+
+#getter and setter
+    def get_name(self):
+        return self.__name
+    
+
+    def set_name(self, value):
+        self.__name = value
+
 
 
     
@@ -66,7 +91,7 @@ class chatbook:
             frnd = input("who to send the message? -- > ")
             print(f"message has been sent to --> {frnd}")
         else:
-            print("please login or create a account")
+            print("please login or create a account to send message")
 
         print("\n")
         self.menu()
